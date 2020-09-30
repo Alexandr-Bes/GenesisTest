@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,17 @@
 		A438EB16251B3F3600FB1934 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A438EB14251B3F3600FB1934 /* LaunchScreen.storyboard */; };
 		A438EB21251B3F3700FB1934 /* GenesisTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A438EB20251B3F3700FB1934 /* GenesisTestTests.swift */; };
 		A438EB2C251B3F3700FB1934 /* GenesisTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A438EB2B251B3F3700FB1934 /* GenesisTestUITests.swift */; };
+		A438EB46251B5C6500FB1934 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A438EB45251B5C6500FB1934 /* Helper.swift */; };
+		A438EB5D251B850B00FB1934 /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A438EB5C251B850B00FB1934 /* LoginProtocol.swift */; };
+		A438EB65251B852500FB1934 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A438EB64251B852500FB1934 /* LoginViewController.swift */; };
+		A438EB6A251B853F00FB1934 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A438EB69251B853F00FB1934 /* LoginInteractor.swift */; };
+		A438EB6F251B855C00FB1934 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A438EB6E251B855C00FB1934 /* LoginPresenter.swift */; };
+		A447B4B92523CA3100C03127 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A447B4B82523CA3100C03127 /* Builder.swift */; };
+		A447B4C12523CABA00C03127 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A447B4C02523CABA00C03127 /* Constants.swift */; };
+		A447B4DC2523CF7E00C03127 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A447B4DB2523CF7E00C03127 /* Endpoints.swift */; };
+		A447B4E42523E0C300C03127 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A447B4E32523E0C300C03127 /* NetworkManager.swift */; };
+		A447B4E92523E20200C03127 /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A447B4E82523E20200C03127 /* NetworkManagerProtocol.swift */; };
+		E0007B12FC51CF8F69B7FC8C /* Pods_GenesisTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A98DD236D7155BE0B6ED90 /* Pods_GenesisTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27A98DD236D7155BE0B6ED90 /* Pods_GenesisTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GenesisTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		760343159A2AC5F1FD895B4C /* Pods-GenesisTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenesisTest.debug.xcconfig"; path = "Target Support Files/Pods-GenesisTest/Pods-GenesisTest.debug.xcconfig"; sourceTree = "<group>"; };
 		A438EB06251B3F3600FB1934 /* GenesisTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenesisTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A438EB09251B3F3600FB1934 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A438EB0B251B3F3600FB1934 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +62,17 @@
 		A438EB27251B3F3700FB1934 /* GenesisTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenesisTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A438EB2B251B3F3700FB1934 /* GenesisTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenesisTestUITests.swift; sourceTree = "<group>"; };
 		A438EB2D251B3F3700FB1934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A438EB45251B5C6500FB1934 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		A438EB5C251B850B00FB1934 /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
+		A438EB64251B852500FB1934 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A438EB69251B853F00FB1934 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		A438EB6E251B855C00FB1934 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		A447B4B82523CA3100C03127 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		A447B4C02523CABA00C03127 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A447B4DB2523CF7E00C03127 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		A447B4E32523E0C300C03127 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A447B4E82523E20200C03127 /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
+		EDBEAB8CEB685711C46A9F13 /* Pods-GenesisTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenesisTest.release.xcconfig"; path = "Target Support Files/Pods-GenesisTest/Pods-GenesisTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0007B12FC51CF8F69B7FC8C /* Pods_GenesisTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2697D252D8ACE628193A87FA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				760343159A2AC5F1FD895B4C /* Pods-GenesisTest.debug.xcconfig */,
+				EDBEAB8CEB685711C46A9F13 /* Pods-GenesisTest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A438EAFD251B3F3600FB1934 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +117,8 @@
 				A438EB1F251B3F3700FB1934 /* GenesisTestTests */,
 				A438EB2A251B3F3700FB1934 /* GenesisTestUITests */,
 				A438EB07251B3F3600FB1934 /* Products */,
+				2697D252D8ACE628193A87FA /* Pods */,
+				A5A3A88DB56359A5B3B4DEF2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +135,9 @@
 		A438EB08251B3F3600FB1934 /* GenesisTest */ = {
 			isa = PBXGroup;
 			children = (
+				A438EB5A251B7D1500FB1934 /* Modules */,
+				A438EB59251B7CDF00FB1934 /* Utils */,
+				A438EB3C251B588A00FB1934 /* Extensions */,
 				A438EB09251B3F3600FB1934 /* AppDelegate.swift */,
 				A438EB0B251B3F3600FB1934 /* SceneDelegate.swift */,
 				A438EB0D251B3F3600FB1934 /* ViewController.swift */,
@@ -128,6 +167,69 @@
 			path = GenesisTestUITests;
 			sourceTree = "<group>";
 		};
+		A438EB3C251B588A00FB1934 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A438EB45251B5C6500FB1934 /* Helper.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A438EB59251B7CDF00FB1934 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A447B4B72523CA2400C03127 /* Builder */,
+				A438EB85251B911F00FB1934 /* Network */,
+				A447B4C02523CABA00C03127 /* Constants.swift */,
+				A447B4DB2523CF7E00C03127 /* Endpoints.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A438EB5A251B7D1500FB1934 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A438EB5B251B84FA00FB1934 /* Login */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A438EB5B251B84FA00FB1934 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A438EB5C251B850B00FB1934 /* LoginProtocol.swift */,
+				A438EB64251B852500FB1934 /* LoginViewController.swift */,
+				A438EB69251B853F00FB1934 /* LoginInteractor.swift */,
+				A438EB6E251B855C00FB1934 /* LoginPresenter.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A438EB85251B911F00FB1934 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A447B4E32523E0C300C03127 /* NetworkManager.swift */,
+				A447B4E82523E20200C03127 /* NetworkManagerProtocol.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A447B4B72523CA2400C03127 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				A447B4B82523CA3100C03127 /* Builder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		A5A3A88DB56359A5B3B4DEF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27A98DD236D7155BE0B6ED90 /* Pods_GenesisTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +237,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A438EB30251B3F3700FB1934 /* Build configuration list for PBXNativeTarget "GenesisTest" */;
 			buildPhases = (
+				B0361579C0DDB35085FD91CA /* [CP] Check Pods Manifest.lock */,
 				A438EB02251B3F3600FB1934 /* Sources */,
 				A438EB03251B3F3600FB1934 /* Frameworks */,
 				A438EB04251B3F3600FB1934 /* Resources */,
+				A48B336D20EEB9D8826D41BD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,14 +357,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A48B336D20EEB9D8826D41BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GenesisTest/Pods-GenesisTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GenesisTest/Pods-GenesisTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GenesisTest/Pods-GenesisTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0361579C0DDB35085FD91CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GenesisTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A438EB02251B3F3600FB1934 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A447B4E42523E0C300C03127 /* NetworkManager.swift in Sources */,
+				A438EB6F251B855C00FB1934 /* LoginPresenter.swift in Sources */,
+				A438EB65251B852500FB1934 /* LoginViewController.swift in Sources */,
 				A438EB0E251B3F3600FB1934 /* ViewController.swift in Sources */,
+				A438EB6A251B853F00FB1934 /* LoginInteractor.swift in Sources */,
 				A438EB0A251B3F3600FB1934 /* AppDelegate.swift in Sources */,
+				A447B4C12523CABA00C03127 /* Constants.swift in Sources */,
+				A447B4B92523CA3100C03127 /* Builder.swift in Sources */,
+				A438EB5D251B850B00FB1934 /* LoginProtocol.swift in Sources */,
 				A438EB0C251B3F3600FB1934 /* SceneDelegate.swift in Sources */,
+				A438EB46251B5C6500FB1934 /* Helper.swift in Sources */,
+				A447B4E92523E20200C03127 /* NetworkManagerProtocol.swift in Sources */,
+				A447B4DC2523CF7E00C03127 /* Endpoints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +522,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -421,7 +577,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -433,6 +589,7 @@
 		};
 		A438EB31251B3F3700FB1934 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 760343159A2AC5F1FD895B4C /* Pods-GenesisTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -446,12 +603,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.GenesisTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		A438EB32251B3F3700FB1934 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDBEAB8CEB685711C46A9F13 /* Pods-GenesisTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -465,7 +623,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.GenesisTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
