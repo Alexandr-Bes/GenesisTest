@@ -45,6 +45,6 @@ final class LoginViewController: UIViewController {
 
 extension LoginViewController: LoginViewInputProtocol {
     func showError(message: String) {
-        print(message)
+        UIAlertController.showAlert(in: self, title: "Error", message: message, closeTitle: "Ok")
     }
 }

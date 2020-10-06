@@ -11,7 +11,6 @@ import UIKit
 final class LoginBuilder: BaseBuilder {
     
     func build() -> UIViewController {
-        
         container.register(LoginInteractor.self) { _ in
             LoginInteractor()
         }.initCompleted { (resolver, interactor) in
@@ -29,6 +28,11 @@ final class LoginBuilder: BaseBuilder {
             LoginViewController()
         }.initCompleted { (resolver, view) in
             view.presenter = resolver.resolve(LoginPresenter.self)
+        }.inObjectScope(.container)
+        
+        container.register(LoginRouter.self) { _ in
+            LoginRouter()
+        }.initCompleted { (resolver, router) in
         }.inObjectScope(.container)
         
         return container.resolve(LoginViewController.self) ?? UIViewController()

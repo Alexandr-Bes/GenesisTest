@@ -9,12 +9,16 @@ import Foundation
 
 class Endpoints {
     
-    private static let authURL = "https://github.com/login/oauth"
-    private static let tokenURL = "https://github.com/login/oauth/access_token"
+    private static let authURL = "https://github.com/login/oauth/"
+    private static let loginUrlString = "\(authURL)/authorize?client_id=\(Constants.clientId)&redirect_url=\(Constants.redirectURL)&state=\(Constants.randomString)"
     
-    private static let loginUrlString = "\(authURL)/authorize?client_id=\(Constants.clientId)&scope=\(Constants.scope)&redirect_uri=\(Constants.redirectURI)&state=\(UUID().uuidString)"
+    //&scope=\(Constants.scope)
     
     static var loginURL: URL {
         return URL(string: loginUrlString)!
+    }
+    
+    static var tokenURL: URL {
+        return URL(string: "\(authURL)/access_token")!
     }
 }

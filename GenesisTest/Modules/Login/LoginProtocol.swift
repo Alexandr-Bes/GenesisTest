@@ -27,4 +27,10 @@ protocol LoginInteractorInputProtocol: class {
 // MARK: -  Interactor -> Presenter
 protocol LoginInteractorOutputProtocol: class {
     func showError(message: String)
+    func showRepository()
+}
+
+// MARK: -  Presenter -> Router
+protocol LoginRouterInputProtocol: class {
+    func pushRepositoryViewController(on view: LoginViewInputProtocol)
 }

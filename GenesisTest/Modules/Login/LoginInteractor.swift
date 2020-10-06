@@ -6,9 +6,14 @@
 //
 
 import Foundation
+import RxAlamofire
+import Alamofire
+import RxSwift
 
 final class LoginInteractor {
     weak var presenter: LoginInteractorOutputProtocol?
+    private let manager = Session.default
+    private let disposeBag = DisposeBag()
 }
 
 extension LoginInteractor: LoginInteractorInputProtocol {
@@ -20,17 +25,35 @@ extension LoginInteractor: LoginInteractorInputProtocol {
     }
     
     func proceedAutorization(url: URL, completion: (Bool) -> ()) {
-        guard let token = GithubUtility.findCodeInUrl(url) else {
+        guard let code = GithubUtility.findCodeInUrl(url) else {
             completion(false)
             return
         }
         completion(true)
-        authorize(with: token)
+        authorize(with: code)
     }
 }
 
 private extension LoginInteractor {
-    func authorize(with token: String) {
-        // TODO: - Network request
+    func authorize(with code: String) {
+        let parameters = GithubUtility.tokenParameters(code: code)
+        let url = Endpoints.tokenURL
+
+        let tokenObservable = manager.rx.responseString(.post, url, parameters: parameters)
+            .observeOn(MainScheduler.instance)
+            .subscribe({ [weak self] (event) in
+                switch event {
+                case .next(let d, let token):
+                    print(d, token)
+                    GithubUtility.saveAccessToken(token)
+                    self?.presenter?.showRepository()
+                case .error(let error):
+                    self?.presenter?.showError(message: error.localizedDescription)
+                case .completed:
+                    print("Completed")
+                }
+            })
+
+        tokenObservable.disposed(by: disposeBag)
     }
 }

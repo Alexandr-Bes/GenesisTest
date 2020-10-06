@@ -11,6 +11,7 @@ import WebKit
 final class LoginPresenter: NSObject {
     weak var view: LoginViewInputProtocol?
     var interactor: LoginInteractorInputProtocol?
+    var router: LoginRouterInputProtocol?
 }
 
 // MARK: - LoginViewOutputProtocol
@@ -20,7 +21,6 @@ extension LoginPresenter: LoginViewOutputProtocol {
         interactor?.openAuthorization({ (request) in
             webView.load(request)
         })
-
     }
 }
 
@@ -28,6 +28,10 @@ extension LoginPresenter: LoginViewOutputProtocol {
 extension LoginPresenter: LoginInteractorOutputProtocol {
     func showError(message: String) {
         view?.showError(message: message)
+    }
+    
+    func showRepository() {
+        router?.pushRepositoryViewController(on: view!)
     }
 }
 
