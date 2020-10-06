@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A438EB0A251B3F3600FB1934 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A438EB09251B3F3600FB1934 /* AppDelegate.swift */; };
 		A438EB0C251B3F3600FB1934 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A438EB0B251B3F3600FB1934 /* SceneDelegate.swift */; };
-		A438EB0E251B3F3600FB1934 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A438EB0D251B3F3600FB1934 /* ViewController.swift */; };
 		A438EB11251B3F3600FB1934 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A438EB0F251B3F3600FB1934 /* Main.storyboard */; };
 		A438EB13251B3F3600FB1934 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A438EB12251B3F3600FB1934 /* Assets.xcassets */; };
 		A438EB16251B3F3600FB1934 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A438EB14251B3F3600FB1934 /* LaunchScreen.storyboard */; };
@@ -25,6 +24,14 @@
 		A447B4DC2523CF7E00C03127 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A447B4DB2523CF7E00C03127 /* Endpoints.swift */; };
 		A447B4E42523E0C300C03127 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A447B4E32523E0C300C03127 /* NetworkManager.swift */; };
 		A447B4E92523E20200C03127 /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A447B4E82523E20200C03127 /* NetworkManagerProtocol.swift */; };
+		A4800DA2252B570100B47F96 /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4800DA1252B570100B47F96 /* LoginEntity.swift */; };
+		A4800DA7252BAA0500B47F96 /* LoginBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4800DA6252BAA0500B47F96 /* LoginBuilder.swift */; };
+		A4800DAF252BB3FB00B47F96 /* GithubUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4800DAE252BB3FB00B47F96 /* GithubUtility.swift */; };
+		A4800DC3252BC31200B47F96 /* RepositoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4800DBD252BC31200B47F96 /* RepositoryPresenter.swift */; };
+		A4800DC4252BC31200B47F96 /* RepositoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4800DBE252BC31200B47F96 /* RepositoryRouter.swift */; };
+		A4800DC6252BC31200B47F96 /* RepositoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4800DC0252BC31200B47F96 /* RepositoryInteractor.swift */; };
+		A4800DC7252BC31200B47F96 /* RepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4800DC1252BC31200B47F96 /* RepositoryView.swift */; };
+		A4800DD5252BC38E00B47F96 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4800DD4252BC38E00B47F96 /* RepositoryProtocol.swift */; };
 		E0007B12FC51CF8F69B7FC8C /* Pods_GenesisTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A98DD236D7155BE0B6ED90 /* Pods_GenesisTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +58,6 @@
 		A438EB06251B3F3600FB1934 /* GenesisTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenesisTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A438EB09251B3F3600FB1934 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A438EB0B251B3F3600FB1934 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A438EB0D251B3F3600FB1934 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A438EB10251B3F3600FB1934 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A438EB12251B3F3600FB1934 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A438EB15251B3F3600FB1934 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,6 +78,14 @@
 		A447B4DB2523CF7E00C03127 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		A447B4E32523E0C300C03127 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		A447B4E82523E20200C03127 /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
+		A4800DA1252B570100B47F96 /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
+		A4800DA6252BAA0500B47F96 /* LoginBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBuilder.swift; sourceTree = "<group>"; };
+		A4800DAE252BB3FB00B47F96 /* GithubUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUtility.swift; sourceTree = "<group>"; };
+		A4800DBD252BC31200B47F96 /* RepositoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryPresenter.swift; sourceTree = "<group>"; };
+		A4800DBE252BC31200B47F96 /* RepositoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRouter.swift; sourceTree = "<group>"; };
+		A4800DC0252BC31200B47F96 /* RepositoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInteractor.swift; sourceTree = "<group>"; };
+		A4800DC1252BC31200B47F96 /* RepositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryView.swift; sourceTree = "<group>"; };
+		A4800DD4252BC38E00B47F96 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		EDBEAB8CEB685711C46A9F13 /* Pods-GenesisTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenesisTest.release.xcconfig"; path = "Target Support Files/Pods-GenesisTest/Pods-GenesisTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,7 +154,6 @@
 				A438EB3C251B588A00FB1934 /* Extensions */,
 				A438EB09251B3F3600FB1934 /* AppDelegate.swift */,
 				A438EB0B251B3F3600FB1934 /* SceneDelegate.swift */,
-				A438EB0D251B3F3600FB1934 /* ViewController.swift */,
 				A438EB0F251B3F3600FB1934 /* Main.storyboard */,
 				A438EB12251B3F3600FB1934 /* Assets.xcassets */,
 				A438EB14251B3F3600FB1934 /* LaunchScreen.storyboard */,
@@ -180,6 +193,7 @@
 			children = (
 				A447B4B72523CA2400C03127 /* Builder */,
 				A438EB85251B911F00FB1934 /* Network */,
+				A4800DAE252BB3FB00B47F96 /* GithubUtility.swift */,
 				A447B4C02523CABA00C03127 /* Constants.swift */,
 				A447B4DB2523CF7E00C03127 /* Endpoints.swift */,
 			);
@@ -189,6 +203,7 @@
 		A438EB5A251B7D1500FB1934 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A4800DBB252BC29400B47F96 /* Repository */,
 				A438EB5B251B84FA00FB1934 /* Login */,
 			);
 			path = Modules;
@@ -201,6 +216,8 @@
 				A438EB64251B852500FB1934 /* LoginViewController.swift */,
 				A438EB69251B853F00FB1934 /* LoginInteractor.swift */,
 				A438EB6E251B855C00FB1934 /* LoginPresenter.swift */,
+				A4800DA1252B570100B47F96 /* LoginEntity.swift */,
+				A4800DA6252BAA0500B47F96 /* LoginBuilder.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -220,6 +237,18 @@
 				A447B4B82523CA3100C03127 /* Builder.swift */,
 			);
 			path = Builder;
+			sourceTree = "<group>";
+		};
+		A4800DBB252BC29400B47F96 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A4800DBD252BC31200B47F96 /* RepositoryPresenter.swift */,
+				A4800DBE252BC31200B47F96 /* RepositoryRouter.swift */,
+				A4800DD4252BC38E00B47F96 /* RepositoryProtocol.swift */,
+				A4800DC0252BC31200B47F96 /* RepositoryInteractor.swift */,
+				A4800DC1252BC31200B47F96 /* RepositoryView.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		A5A3A88DB56359A5B3B4DEF2 /* Frameworks */ = {
@@ -404,11 +433,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4800DC7252BC31200B47F96 /* RepositoryView.swift in Sources */,
 				A447B4E42523E0C300C03127 /* NetworkManager.swift in Sources */,
 				A438EB6F251B855C00FB1934 /* LoginPresenter.swift in Sources */,
+				A4800DC3252BC31200B47F96 /* RepositoryPresenter.swift in Sources */,
 				A438EB65251B852500FB1934 /* LoginViewController.swift in Sources */,
-				A438EB0E251B3F3600FB1934 /* ViewController.swift in Sources */,
 				A438EB6A251B853F00FB1934 /* LoginInteractor.swift in Sources */,
+				A4800DC6252BC31200B47F96 /* RepositoryInteractor.swift in Sources */,
+				A4800DAF252BB3FB00B47F96 /* GithubUtility.swift in Sources */,
 				A438EB0A251B3F3600FB1934 /* AppDelegate.swift in Sources */,
 				A447B4C12523CABA00C03127 /* Constants.swift in Sources */,
 				A447B4B92523CA3100C03127 /* Builder.swift in Sources */,
@@ -416,7 +448,11 @@
 				A438EB0C251B3F3600FB1934 /* SceneDelegate.swift in Sources */,
 				A438EB46251B5C6500FB1934 /* Helper.swift in Sources */,
 				A447B4E92523E20200C03127 /* NetworkManagerProtocol.swift in Sources */,
+				A4800DA7252BAA0500B47F96 /* LoginBuilder.swift in Sources */,
+				A4800DA2252B570100B47F96 /* LoginEntity.swift in Sources */,
+				A4800DC4252BC31200B47F96 /* RepositoryRouter.swift in Sources */,
 				A447B4DC2523CF7E00C03127 /* Endpoints.swift in Sources */,
+				A4800DD5252BC38E00B47F96 /* RepositoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
