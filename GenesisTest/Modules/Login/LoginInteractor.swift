@@ -38,12 +38,11 @@ private extension LoginInteractor {
     func authorize(with code: String) {
         let parameters = GithubUtility.tokenParameters(code: code)
         let url = Endpoints.tokenURL
-
         let tokenObservable = manager.rx.responseString(.post, url, parameters: parameters)
             .observeOn(MainScheduler.instance)
             .subscribe({ [weak self] (event) in
                 switch event {
-                case .next(let d, let token):
+                case .next((let d, let token)):
                     print(d, token)
                     GithubUtility.saveAccessToken(token)
                     self?.presenter?.showRepository()

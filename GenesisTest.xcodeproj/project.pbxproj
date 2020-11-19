@@ -31,6 +31,7 @@
 		A4800DC6252BC31200B47F96 /* RepositoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4800DC0252BC31200B47F96 /* RepositoryInteractor.swift */; };
 		A4800DC7252BC31200B47F96 /* RepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4800DC1252BC31200B47F96 /* RepositoryView.swift */; };
 		A4800DD5252BC38E00B47F96 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4800DD4252BC38E00B47F96 /* RepositoryProtocol.swift */; };
+		A484EC52256695EC00393E60 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484EC51256695EC00393E60 /* API.swift */; };
 		A4DFAB3F252D1C3600185A76 /* UIAlertController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DFAB0C252CCE6E00185A76 /* UIAlertController+Ext.swift */; };
 		A4DFAB43252D1C4500185A76 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DFAB11252CF4C000185A76 /* LoginRouter.swift */; };
 		A4DFAB47252D1C6700185A76 /* UserDefaultsLocalStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DFAAF0252CB6A800185A76 /* UserDefaultsLocalStorageAdapter.swift */; };
@@ -88,11 +89,13 @@
 		A4800DC0252BC31200B47F96 /* RepositoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInteractor.swift; sourceTree = "<group>"; };
 		A4800DC1252BC31200B47F96 /* RepositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryView.swift; sourceTree = "<group>"; };
 		A4800DD4252BC38E00B47F96 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
+		A484EC51256695EC00393E60 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = GenesisTest/Utils/API.swift; sourceTree = SOURCE_ROOT; };
 		A4DFAAF0252CB6A800185A76 /* UserDefaultsLocalStorageAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsLocalStorageAdapter.swift; sourceTree = "<group>"; };
 		A4DFAAF6252CB72400185A76 /* LocalStorageAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageAdapter.swift; sourceTree = "<group>"; };
 		A4DFAB0C252CCE6E00185A76 /* UIAlertController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Ext.swift"; sourceTree = "<group>"; };
 		A4DFAB11252CF4C000185A76 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		A4DFAB16252CFEF300185A76 /* AppDelegateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateProvider.swift; sourceTree = "<group>"; };
+		A4DFABE625306E5F00185A76 /* Repository.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Repository.graphql; sourceTree = "<group>"; };
 		EDBEAB8CEB685711C46A9F13 /* Pods-GenesisTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenesisTest.release.xcconfig"; path = "Target Support Files/Pods-GenesisTest/Pods-GenesisTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,6 +202,7 @@
 				A447B4B72523CA2400C03127 /* Builder */,
 				A438EB85251B911F00FB1934 /* Network */,
 				A4DFAAF5252CB71000185A76 /* LocalStorageAdapter */,
+				A484EC51256695EC00393E60 /* API.swift */,
 				A4800DAE252BB3FB00B47F96 /* GithubUtility.swift */,
 				A447B4C02523CABA00C03127 /* Constants.swift */,
 				A447B4DB2523CF7E00C03127 /* Endpoints.swift */,
@@ -249,9 +253,9 @@
 		A4800DBB252BC29400B47F96 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				A4800DD4252BC38E00B47F96 /* RepositoryProtocol.swift */,
 				A4800DBD252BC31200B47F96 /* RepositoryPresenter.swift */,
 				A4800DBE252BC31200B47F96 /* RepositoryRouter.swift */,
-				A4800DD4252BC38E00B47F96 /* RepositoryProtocol.swift */,
 				A4800DC0252BC31200B47F96 /* RepositoryInteractor.swift */,
 				A4800DC1252BC31200B47F96 /* RepositoryView.swift */,
 			);
@@ -290,6 +294,7 @@
 				A438EB09251B3F3600FB1934 /* AppDelegate.swift */,
 				A438EB0B251B3F3600FB1934 /* SceneDelegate.swift */,
 				A4DFAB16252CFEF300185A76 /* AppDelegateProvider.swift */,
+				A4DFABE625306E5F00185A76 /* Repository.graphql */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 				A438EB03251B3F3600FB1934 /* Frameworks */,
 				A438EB04251B3F3600FB1934 /* Resources */,
 				A48B336D20EEB9D8826D41BD /* [CP] Embed Pods Frameworks */,
+				A4DFABE725306EA800185A76 /* Apollo CLI */,
 			);
 			buildRules = (
 			);
@@ -446,6 +452,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GenesisTest/Pods-GenesisTest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A4DFABE725306EA800185A76 /* Apollo CLI */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Apollo CLI";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n";
+		};
 		B0361579C0DDB35085FD91CA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -494,6 +518,7 @@
 				A438EB46251B5C6500FB1934 /* Helper.swift in Sources */,
 				A447B4E92523E20200C03127 /* NetworkManagerProtocol.swift in Sources */,
 				A4DFAB47252D1C6700185A76 /* UserDefaultsLocalStorageAdapter.swift in Sources */,
+				A484EC52256695EC00393E60 /* API.swift in Sources */,
 				A4800DA7252BAA0500B47F96 /* LoginBuilder.swift in Sources */,
 				A4800DA2252B570100B47F96 /* LoginEntity.swift in Sources */,
 				A4800DC4252BC31200B47F96 /* RepositoryRouter.swift in Sources */,

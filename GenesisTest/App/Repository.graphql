@@ -1,0 +1,17 @@
+query Repo($queryString: String!) {
+    search(query: $queryString, type: REPOSITORY, first: 30) {
+        repositoryCount
+        edges {
+            node {
+                ... on Repository {
+                    name
+                    description
+                    stargazers {
+                        totalCount
+                    }
+                    updatedAt
+                }
+            }
+        }
+    }
+}

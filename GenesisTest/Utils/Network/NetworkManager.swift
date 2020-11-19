@@ -29,7 +29,7 @@ class NetworkManager: NetworkManagerProtocol {
         case .queryString:
             urlEncoding = URLEncoding.default
         }
-        // TODO: - rx request
+    // TODO: - rx request
 //        let se = Session.rx.request()
         
         AF.request(url, method: httpMethod, parameters: requestParameters, encoding: urlEncoding, headers: httpHeaders).response { (response) in

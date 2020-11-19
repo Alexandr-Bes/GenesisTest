@@ -25,9 +25,9 @@ class GithubUtility {
     }
     
     static func tokenParameters(code: String) -> [String: Any] {
-        let parameters: [String: Any] = ["client_id": Constants.clientId,
+        let parameters: [String: Any] = ["client_id"     : Constants.clientId,
                                          "client_secret" : Constants.clientSecret,
-                                         "code" : code]
+                                         "code"          : code]
 //                                         "redirect_uri": Constants.redirectURI,
 //                                         "state" : Constants.randomString]
         return parameters
@@ -35,7 +35,25 @@ class GithubUtility {
     
     static func saveAccessToken(_ token: String) {
         let substrings : [String] = token.components(separatedBy: "&")
-        let token = substrings.filter { $0.hasPrefix("access_token=") }.first
+        let token = substrings.filter { $0.hasPrefix("access_token=") }.first?.replacingOccurrences(of: "access_token=", with: "") // take a look
         UserDefaultsLocalStorageAdapter().set(object: token, for: Constants.accessToken)
     }
+    
+    static func getHeaderForRepoRequest() -> [String : String]? {
+        let accessToken: String? = UserDefaultsLocalStorageAdapter().get(for: Constants.accessToken) ?? nil
+        guard let token = accessToken else { return nil }
+        
+        let headers = ["Authorization" : "Bearer \(token)",
+                        "Content-Type" : "application/json"]
+        return headers
+    }
+    
+    //    var token: String {
+    //        set {
+    //            UserDefaultsLocalStorageAdapter().set(object: newValue, for: Constants.accessToken)
+    //        }
+    //        get {
+    //            return UserDefaultsLocalStorageAdapter().get(for: Constants.accessToken) ?? ""
+    //        }
+    //    }
 }

@@ -13,7 +13,7 @@ protocol LoginViewOutputProtocol: class {
     func load(webView: WKWebView)
 }
 
-// MARK: -  Preseneter -> View
+// MARK: -  Presenter -> View
 protocol LoginViewInputProtocol: class {
     func showError(message: String)
 }
