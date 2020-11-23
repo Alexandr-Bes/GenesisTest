@@ -18,10 +18,10 @@ final class LoginRouter {
 
 extension LoginRouter: LoginRouterInputProtocol {
     func pushRepositoryViewController(on view: LoginViewInputProtocol) {
-        
-        print("Repo")
-//        let repositoryViewController = RepositoryBuilder.buildModule()
-//        let presentedViewController = view as! LoginViewController
-//        presentedViewController.navigationController?.pushViewController(repositoryVC, animated: true)
+        let repositoryViewController = RepositoryRouter.createModule()
+        guard let presentedViewController = view as? LoginViewController else { return }
+        presentedViewController.navigationController?.setViewControllers([repositoryViewController], animated:true)
+//        presentedViewController.navigationController?.pushViewController(repositoryViewController, animated: true)
+        print("Push Repository VC")
     }
 }

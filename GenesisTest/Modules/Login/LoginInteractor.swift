@@ -38,6 +38,14 @@ private extension LoginInteractor {
     func authorize(with code: String) {
         let parameters = GithubUtility.tokenParameters(code: code)
         let url = Endpoints.tokenURL
+     
+//        RxAlamofire.requestString(.post, url, parameters: parameters, encoding: URLEncoding.default)
+//            .debug()
+//            .subscribe { (<#Event<(HTTPURLResponse, String)>#>) in
+//                <#code#>
+//            }
+        
+        
         let tokenObservable = manager.rx.responseString(.post, url, parameters: parameters)
             .observeOn(MainScheduler.instance)
             .subscribe({ [weak self] (event) in

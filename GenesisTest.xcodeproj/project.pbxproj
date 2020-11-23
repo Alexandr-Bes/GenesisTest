@@ -32,6 +32,9 @@
 		A4800DC7252BC31200B47F96 /* RepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4800DC1252BC31200B47F96 /* RepositoryView.swift */; };
 		A4800DD5252BC38E00B47F96 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4800DD4252BC38E00B47F96 /* RepositoryProtocol.swift */; };
 		A484EC52256695EC00393E60 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484EC51256695EC00393E60 /* API.swift */; };
+		A484EC5A2566B3B500393E60 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484EC592566B3B500393E60 /* UIView+Extension.swift */; };
+		A484EC692566DE3200393E60 /* RepositoryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484EC682566DE3200393E60 /* RepositoryBuilder.swift */; };
+		A484EC7C256BC72400393E60 /* RxApollo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484EC7B256BC72400393E60 /* RxApollo.swift */; };
 		A4DFAB3F252D1C3600185A76 /* UIAlertController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DFAB0C252CCE6E00185A76 /* UIAlertController+Ext.swift */; };
 		A4DFAB43252D1C4500185A76 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DFAB11252CF4C000185A76 /* LoginRouter.swift */; };
 		A4DFAB47252D1C6700185A76 /* UserDefaultsLocalStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DFAAF0252CB6A800185A76 /* UserDefaultsLocalStorageAdapter.swift */; };
@@ -90,6 +93,9 @@
 		A4800DC1252BC31200B47F96 /* RepositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryView.swift; sourceTree = "<group>"; };
 		A4800DD4252BC38E00B47F96 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		A484EC51256695EC00393E60 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = GenesisTest/Utils/API.swift; sourceTree = SOURCE_ROOT; };
+		A484EC592566B3B500393E60 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		A484EC682566DE3200393E60 /* RepositoryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryBuilder.swift; sourceTree = "<group>"; };
+		A484EC7B256BC72400393E60 /* RxApollo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RxApollo.swift; path = ../../../RxApollo.swift; sourceTree = "<group>"; };
 		A4DFAAF0252CB6A800185A76 /* UserDefaultsLocalStorageAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsLocalStorageAdapter.swift; sourceTree = "<group>"; };
 		A4DFAAF6252CB72400185A76 /* LocalStorageAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageAdapter.swift; sourceTree = "<group>"; };
 		A4DFAB0C252CCE6E00185A76 /* UIAlertController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Ext.swift"; sourceTree = "<group>"; };
@@ -191,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				A438EB45251B5C6500FB1934 /* Helper.swift */,
+				A484EC592566B3B500393E60 /* UIView+Extension.swift */,
 				A4DFAB0C252CCE6E00185A76 /* UIAlertController+Ext.swift */,
 			);
 			path = Extensions;
@@ -256,6 +263,7 @@
 				A4800DD4252BC38E00B47F96 /* RepositoryProtocol.swift */,
 				A4800DBD252BC31200B47F96 /* RepositoryPresenter.swift */,
 				A4800DBE252BC31200B47F96 /* RepositoryRouter.swift */,
+				A484EC682566DE3200393E60 /* RepositoryBuilder.swift */,
 				A4800DC0252BC31200B47F96 /* RepositoryInteractor.swift */,
 				A4800DC1252BC31200B47F96 /* RepositoryView.swift */,
 			);
@@ -294,6 +302,7 @@
 				A438EB09251B3F3600FB1934 /* AppDelegate.swift */,
 				A438EB0B251B3F3600FB1934 /* SceneDelegate.swift */,
 				A4DFAB16252CFEF300185A76 /* AppDelegateProvider.swift */,
+				A484EC7B256BC72400393E60 /* RxApollo.swift */,
 				A4DFABE625306E5F00185A76 /* Repository.graphql */,
 			);
 			path = App;
@@ -513,10 +522,13 @@
 				A438EB0A251B3F3600FB1934 /* AppDelegate.swift in Sources */,
 				A447B4C12523CABA00C03127 /* Constants.swift in Sources */,
 				A447B4B92523CA3100C03127 /* Builder.swift in Sources */,
+				A484EC5A2566B3B500393E60 /* UIView+Extension.swift in Sources */,
 				A438EB5D251B850B00FB1934 /* LoginProtocol.swift in Sources */,
 				A438EB0C251B3F3600FB1934 /* SceneDelegate.swift in Sources */,
 				A438EB46251B5C6500FB1934 /* Helper.swift in Sources */,
+				A484EC7C256BC72400393E60 /* RxApollo.swift in Sources */,
 				A447B4E92523E20200C03127 /* NetworkManagerProtocol.swift in Sources */,
+				A484EC692566DE3200393E60 /* RepositoryBuilder.swift in Sources */,
 				A4DFAB47252D1C6700185A76 /* UserDefaultsLocalStorageAdapter.swift in Sources */,
 				A484EC52256695EC00393E60 /* API.swift in Sources */,
 				A4800DA7252BAA0500B47F96 /* LoginBuilder.swift in Sources */,

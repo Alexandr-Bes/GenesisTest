@@ -14,7 +14,9 @@ final class RepositoryPresenter {
     
     weak var view: RepositoryViewInputProtocol?
     var interactor: RepositoryInteractorInputProtocol?
+    var router: RepositoryRouterInputProtocol?
     
+    var repositoriesData: [RepoQuery.Data.Search.Edge?]? = nil
 }
 
 // MARK: Inputs from view
@@ -22,7 +24,12 @@ final class RepositoryPresenter {
 extension RepositoryPresenter: RepositoryViewOutputProtocol {
     func viewDidLoad() {
 //        view.showActivity
-//        interactor?.loadRepositories
+    }
+    
+    func searchRepositories(with text: String) {
+        let result = interactor?.loadRepositories(with: text)
+        print(result)
+//        interactor?.loadRepositories(with: text)
     }
     
     func refresh() {
@@ -30,7 +37,7 @@ extension RepositoryPresenter: RepositoryViewOutputProtocol {
     }
     
     func numberOfRowsInSection() -> Int {
-        return 1
+        return repositoriesData?.count ?? 1
     }
     
     func didSelectRowAt(index: Int) {
@@ -45,12 +52,13 @@ extension RepositoryPresenter: RepositoryViewOutputProtocol {
 // MARK: Inputs from Interactor
 
 extension RepositoryPresenter: RepositoryInteractorOutputProtocol {
-    func showError(message: String) {
-        view?.showError(message: message)
+    func showLoadedData(data: [RepoQuery.Data.Search.Edge?]?) {
+        repositoriesData = data
+        view?.showRepositories(with: data)
     }
     
-    func showLoadedData() {
-//        view.showRepositories
+    func showError(message: String) {
+        view?.showError(message: message)
     }
 }
 

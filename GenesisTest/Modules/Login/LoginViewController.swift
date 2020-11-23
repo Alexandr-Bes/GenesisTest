@@ -10,13 +10,19 @@ import WebKit
 
 final class LoginViewController: UIViewController {
 
+    //MARK: - Properties
+    
     var presenter: LoginViewOutputProtocol?
 
+    // MARK: - UI
+    
     private lazy var webView: WKWebView = {
         return WKWebView(frame: UIScreen.main.bounds,
                          configuration: WKWebViewConfiguration())
     }()
 
+    // MARK: - Lifecycle
+    
     override func loadView() {
         view = webView
     }
@@ -26,8 +32,11 @@ final class LoginViewController: UIViewController {
         loadWebView()
         setupUI()
     }
-
-    @objc func refreshAction() {
+    
+    // MARK: - Private Methods
+    
+    @objc private func refreshAction() {
+//        self.webView.reload()
         loadWebView()
     }
     
@@ -35,6 +44,7 @@ final class LoginViewController: UIViewController {
         let refreshButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(self.refreshAction))
         self.navigationItem.rightBarButtonItem = refreshButton
         self.navigationItem.title = "Authorization"
+        webView.addConstraintsToSafeArea()
     }
     
     private func loadWebView() {
@@ -42,6 +52,8 @@ final class LoginViewController: UIViewController {
     }
     
 }
+
+// MARK: - View Input
 
 extension LoginViewController: LoginViewInputProtocol {
     func showError(message: String) {

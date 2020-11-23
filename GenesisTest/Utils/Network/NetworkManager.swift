@@ -8,8 +8,22 @@
 import Foundation
 import Alamofire
 import RxAlamofire
+import Apollo
 
 class NetworkManager: NetworkManagerProtocol {
+    
+    // TEMP!!!
+    static let shared = NetworkManager()
+    
+    private(set) lazy var apollo: ApolloClient = {
+        let accessToken: String? = UserDefaultsLocalStorageAdapter().get(for: Constants.accessToken) ?? nil
+        let url = Endpoints.graphURL
+        let configuration = URLSessionConfiguration.default
+        configuration.httpAdditionalHeaders = ["authorization": "Bearer \(accessToken!)"]
+        let client = URLSessionClient(sessionConfiguration: configuration)
+        let apolloClient = ApolloClient(networkTransport: HTTPNetworkTransport(url: url, client: client))
+        return apolloClient
+    }()
     
     func makeRequest(url: URL, httpMethod: NetworkHTTPMethod, encoding: Encoding, requestParameters: NetworkParameters?, requestHeaders: NetworkHTTPHeaders?, responseHandler: @escaping (NetworkResponse) -> Void) {
         
@@ -29,13 +43,14 @@ class NetworkManager: NetworkManagerProtocol {
         case .queryString:
             urlEncoding = URLEncoding.default
         }
-    // TODO: - rx request
-//        let se = Session.rx.request()
+        
         
         AF.request(url, method: httpMethod, parameters: requestParameters, encoding: urlEncoding, headers: httpHeaders).response { (response) in
             responseHandler(response.serviceResponse)
         }
     }
+    
+    
     
 }
 

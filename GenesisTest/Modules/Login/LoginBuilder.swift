@@ -22,6 +22,7 @@ final class LoginBuilder: BaseBuilder {
         }.initCompleted { (resolver, presenter) in
             presenter.interactor = resolver.resolve(LoginInteractor.self)
             presenter.view = resolver.resolve(LoginViewController.self)
+            presenter.router = resolver.resolve(LoginRouter.self)
         }.inObjectScope(.container)
         
         container.register(LoginViewController.self) { _ in

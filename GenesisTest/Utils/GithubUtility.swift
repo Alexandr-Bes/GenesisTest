@@ -48,6 +48,12 @@ class GithubUtility {
         return headers
     }
     
+    // Return text with sorting ordered by stars
+    static func makeCorrectStringRequest(from string: String) -> String {
+        let result = string + " sort:stars"
+        return result
+    }
+    
     //    var token: String {
     //        set {
     //            UserDefaultsLocalStorageAdapter().set(object: newValue, for: Constants.accessToken)

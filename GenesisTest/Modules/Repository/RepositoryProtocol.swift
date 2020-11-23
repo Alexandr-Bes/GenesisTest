@@ -6,12 +6,15 @@
 //
 
 import Foundation
+import RxSwift
 
 // MARK: -  View -> Presenter
 protocol RepositoryViewOutputProtocol: class {
     func viewDidLoad()
     
     func refresh()
+    
+    func searchRepositories(with text: String)
     
     func numberOfRowsInSection() -> Int
     
@@ -21,6 +24,7 @@ protocol RepositoryViewOutputProtocol: class {
 
 // MARK: -  Presenter -> View
 protocol RepositoryViewInputProtocol: class {
+    func showRepositories(with data: [RepoQuery.Data.Search.Edge?]?)
     func showError(message: String)
 }
 
@@ -36,6 +40,6 @@ protocol RepositoryInteractorOutputProtocol: class {
 }
 
 //MARK: - Presenter -> Router
-protocol RepositoryRouterInputProtocol {
+protocol RepositoryRouterInputProtocol: class {
     func pushRepositoryDetails()
 }
