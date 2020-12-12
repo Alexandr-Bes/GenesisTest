@@ -45,9 +45,10 @@ class NetworkManager: NetworkManagerProtocol {
         }
         
         
-        AF.request(url, method: httpMethod, parameters: requestParameters, encoding: urlEncoding, headers: httpHeaders).response { (response) in
+        let data = AF.request(url, method: httpMethod, parameters: requestParameters, encoding: urlEncoding, headers: httpHeaders).response { (response) in
             responseHandler(response.serviceResponse)
         }
+        print(data)
     }
     
     
