@@ -21,7 +21,9 @@ class NetworkManager: NetworkManagerProtocol {
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = ["authorization": "Bearer \(accessToken!)"]
         let client = URLSessionClient(sessionConfiguration: configuration)
-        let apolloClient = ApolloClient(networkTransport: HTTPNetworkTransport(url: url, client: client))
+        let apolloClient = ApolloClient(url: url)
+        //TODO: - SMTh wrong with NetworkTransport
+//        let apolloClient = ApolloClient(networkTransport: HTTPNetworkTransport(url: url, client: client))
         return apolloClient
     }()
     
